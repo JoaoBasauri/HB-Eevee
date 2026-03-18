@@ -2,11 +2,11 @@ import { useState } from "react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "@react-hook/window-size";
 
-import foto1 from "../assets/foto1.jpg";
-import foto2 from "../assets/foto2.jpg";
-import foto3 from "../assets/foto3.jpg";
-import foto4 from "../assets/foto4.jpg";
-import foto5 from "../assets/foto5.jpg";
+import foto1 from "../assets/Quiz/foto1.jpg";
+import foto2 from "../assets/Quiz/foto2.jpg";
+import foto3 from "../assets/Quiz/foto3.jpg";
+import foto4 from "../assets/Quiz/foto4.jpg";
+import foto5 from "../assets/Quiz/foto5.jpg";
 
 function Quiz({ next }) {
 
@@ -159,7 +159,6 @@ function Quiz({ next }) {
                         <button
                             onClick={() => {
                                 setShowModal(false);
-                                nextQuestion();
                             }}
                             className="bg-pastelPink text-white px-6 py-2 rounded-lg hover:bg-pink-300 transition"
                         >
