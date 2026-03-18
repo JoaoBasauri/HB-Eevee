@@ -1,41 +1,38 @@
-import { useEffect, useState } from "react";
-
 function FinalVideo() {
-
-    const [show, setShow] = useState(false);
-
-    // animación de entrada suave
-    useEffect(() => {
-        setTimeout(() => setShow(true), 300);
-    }, []);
-
     return (
-        <div className={`bg-softPink p-8 md:p-10 rounded-2xl shadow-xl text-center max-w-3xl mx-auto transition-all duration-1000 ${show ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
+        <div className="bg-black min-h-screen flex flex-col items-center justify-center p-6 text-center">
 
-            <h2 className="text-4xl font-bold text-roseText mb-6">
+            <h2 className="text-3xl md:text-4xl text-white mb-6">
                 Para ti 💖
             </h2>
 
-            <p className="mb-6 text-lg">
-                Este es solo un pequeño agradecimiento de todo lo bonito que hemos vivido juntos...
-            </p>
+            <div className="relative w-full max-w-md">
 
-            {/* VIDEO */}
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                {/* FONDO DIFUMINADO */}
+                <div className="absolute inset-0 blur-2xl opacity-40 scale-110">
+                    <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/PM554f9qxK4?autoplay=1&mute=1&loop=1&playlist=PM554f9qxK4"
+                        title="background video"
+                    />
+                </div>
 
-                <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&mute=1&rel=0&modestbranding=1"
-                    title="Video especial"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                />
+                {/* VIDEO PRINCIPAL (VERTICAL) */}
+                <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+
+                    <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/PM554f9qxK4?autoplay=1&mute=1&rel=0&modestbranding=1"
+                        title="Video especial"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                    />
+                </div>
 
             </div>
 
-            {/* MENSAJE FINAL */}
-            <p className="mt-6 text-sm text-gray-600 animate-pulse">
-                Te AMO mucho 💕
+            <p className="text-white mt-6 opacity-80">
+                Te amo mucho 💕
             </p>
 
         </div>
