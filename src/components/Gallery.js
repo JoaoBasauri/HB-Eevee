@@ -30,6 +30,7 @@ function Gallery({ next }) {
                     <img
                         key={i}
                         src={img}
+                        alt={`Recuerdo ${i + 1}`}
                         loading="lazy"
                         onClick={() => setSelected(img)}
                         className="rounded-xl shadow-md hover:scale-105 transition transform cursor-pointer object-cover w-full h-32 md:h-40"
@@ -54,6 +55,7 @@ function Gallery({ next }) {
                 >
                     <img
                         src={selected}
+                        alt="Imagen ampliada"
                         className="max-h-[85%] max-w-[90%] rounded-xl shadow-2xl"
                     />
                 </div>

@@ -153,6 +153,7 @@ function Quiz({ next }) {
 
                         <img
                             src={q.failImage}
+                            alt="Respuesta incorrecta"
                             className="rounded-xl shadow-lg mb-4"
                         />
 
